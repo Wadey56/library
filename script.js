@@ -17,4 +17,7 @@ function addBookToLibrary() {
 } 
 
 const submitBook = document.getElementById('submitBookButton');
-submitBook.addEventListener("click", addBookToLibrary);
+submitBook.addEventListener("click", (event) => {
+    event.preventDefault()
+    addBookToLibrary()
+});
