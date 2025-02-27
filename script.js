@@ -21,3 +21,15 @@ submitBook.addEventListener("click", (event) => {
     event.preventDefault()
     addBookToLibrary()
 });
+
+for (let i = 0; i < myLibrary.length; i++) {
+    let bookTitle = document.createElement("h3")
+    bookTitle.textContent = myLibrary[i].title
+    let bookAuthor = document.createElement("h4")
+    bookAuthor.textContent = myLibrary[i].author
+    let bookPages = document.createElement("p")
+    bookPages.textContent = myLibrary[i].pages
+    let bookRead = document.createElement("p")
+    bookRead.textContent = myLibrary[i].read
+
+}
