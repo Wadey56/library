@@ -20,18 +20,28 @@ const submitBook = document.getElementById('submitBookButton');
 submitBook.addEventListener("click", (event) => {
     event.preventDefault();
     addBookToLibrary();
+    displayLibrary();
 });
 
 libraryGrid = document.querySelector(".libraryGrid");
 
-for (let i = 0; i < myLibrary.length; i++) {
-    let bookTitle = document.createElement("h3");
-    bookTitle.textContent = myLibrary[i].title;
-    let bookAuthor = document.createElement("h4");
-    bookAuthor.textContent = myLibrary[i].author;
-    let bookPages = document.createElement("p");
-    bookPages.textContent = myLibrary[i].pages;
-    let bookRead = document.createElement("p");
-    bookRead.textContent = myLibrary[i].read;
+function displayLibrary(){
+    for (let i = 0; i < myLibrary.length; i++) {
+        let bookCard = document.createElement("div");
+        bookCard.className = myLibrary[i].title + "card";
+        let bookTitle = document.createElement("h3");
+        bookTitle.textContent = myLibrary[i].title;
+        let bookAuthor = document.createElement("h4");
+        bookAuthor.textContent = myLibrary[i].author;
+        let bookPages = document.createElement("p");
+        bookPages.textContent = myLibrary[i].pages;
+        let bookRead = document.createElement("p");
+        bookRead.textContent = myLibrary[i].read;
 
+        libraryGrid.appendChild(bookCard);
+        bookCard.appendChild(bookTitle);
+        bookCard.appendChild(bookAuthor);
+        bookCard.appendChild(bookPages);
+        bookCard.appendChild(bookRead);
+    }
 }
