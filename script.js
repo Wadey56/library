@@ -5,6 +5,7 @@ function Book(title, author, pages, read) {
     this.author = author;
     this.pages = pages;
     this.read = read;
+    this.new = true;
 }
 
 function addBookToLibrary() {
@@ -27,21 +28,25 @@ libraryGrid = document.querySelector(".libraryGrid");
 
 function displayLibrary(){
     for (let i = 0; i < myLibrary.length; i++) {
-        let bookCard = document.createElement("div");
-        bookCard.className = myLibrary[i].title + "card";
-        let bookTitle = document.createElement("h3");
-        bookTitle.textContent = myLibrary[i].title;
-        let bookAuthor = document.createElement("h4");
-        bookAuthor.textContent = myLibrary[i].author;
-        let bookPages = document.createElement("p");
-        bookPages.textContent = myLibrary[i].pages;
-        let bookRead = document.createElement("p");
-        bookRead.textContent = myLibrary[i].read;
+        if (myLibrary[i].new == true) {
+            let bookCard = document.createElement("div");
+            bookCard.className = myLibrary[i].title + "card";
+            let bookTitle = document.createElement("h3");
+            bookTitle.textContent = myLibrary[i].title;
+            let bookAuthor = document.createElement("h4");
+            bookAuthor.textContent = myLibrary[i].author;
+            let bookPages = document.createElement("p");
+            bookPages.textContent = myLibrary[i].pages;
+            let bookRead = document.createElement("p");
+            bookRead.textContent = myLibrary[i].read;
 
-        libraryGrid.appendChild(bookCard);
-        bookCard.appendChild(bookTitle);
-        bookCard.appendChild(bookAuthor);
-        bookCard.appendChild(bookPages);
-        bookCard.appendChild(bookRead);
+            libraryGrid.appendChild(bookCard);
+            bookCard.appendChild(bookTitle);
+            bookCard.appendChild(bookAuthor);
+            bookCard.appendChild(bookPages);
+            bookCard.appendChild(bookRead);
+
+            myLibrary[i].new = false;
+        }
     }
 }
