@@ -1,11 +1,13 @@
 const myLibrary = [];
+let counter = 0;
 
-function Book(title, author, pages, read) {
+function Book(title, author, pages, read, id) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.new = true;
+    this.id = id
 }
 
 function addBookToLibrary() {
@@ -13,7 +15,8 @@ function addBookToLibrary() {
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const read = document.getElementById("read").checked;
-    const book = new Book(title, author, pages, read);
+    const id = counter++
+    const book = new Book(title, author, pages, read, id);
     myLibrary.push(book);
 } 
 
