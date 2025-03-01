@@ -9,15 +9,21 @@ function Book(title, author, pages, read) {
 }
 
 function addBookToLibrary() {
-    const title = document.getElementById('title').value;
-    const author = document.getElementById('author').value;
-    const pages = document.getElementById('pages').value;
-    const read = document.getElementById('read').checked;
+    const title = document.getElementById("title").value;
+    const author = document.getElementById("author").value;
+    const pages = document.getElementById("pages").value;
+    const read = document.getElementById("read").checked;
     const book = new Book(title, author, pages, read);
     myLibrary.push(book);
 } 
 
-const submitBook = document.getElementById('submit-book');
+const addBook = document.getElementById("add-book");
+const bookModal = document.getElementById("add-book-modal");
+addBook.addEventListener("click", () => {
+    bookModal.showModal();
+})
+
+const submitBook = document.getElementById("submit-book");
 submitBook.addEventListener("click", (event) => {
     event.preventDefault();
     addBookToLibrary();
