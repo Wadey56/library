@@ -50,6 +50,7 @@ function displayLibrary(){
             bookRead.textContent = myLibrary[i].read;
             let removeBook = document.createElement("button");
             removeBook.textContent = "Remove";
+            removeBook.id = myLibrary[i].id;
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
