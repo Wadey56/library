@@ -48,12 +48,15 @@ function displayLibrary(){
             bookPages.textContent = myLibrary[i].pages;
             let bookRead = document.createElement("p");
             bookRead.textContent = myLibrary[i].read;
+            let removeBook = document.createElement("button");
+            removeBook.textContent = "Remove";
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
             bookCard.appendChild(bookAuthor);
             bookCard.appendChild(bookPages);
             bookCard.appendChild(bookRead);
+            bookCard.appendChild(removeBook);
 
             myLibrary[i].new = false;
         }
