@@ -17,20 +17,20 @@ function addBookToLibrary() {
     myLibrary.push(book);
 } 
 
-const submitBook = document.getElementById('submitBookButton');
+const submitBook = document.getElementById('submit-book');
 submitBook.addEventListener("click", (event) => {
     event.preventDefault();
     addBookToLibrary();
     displayLibrary();
 });
 
-libraryGrid = document.querySelector(".libraryGrid");
+libraryGrid = document.querySelector(".library-grid");
 
 function displayLibrary(){
     for (let i = 0; i < myLibrary.length; i++) {
         if (myLibrary[i].new == true) {
             let bookCard = document.createElement("div");
-            bookCard.id = myLibrary[i].title + "-card"; // change this to id so class can be styled
+            bookCard.id = myLibrary[i].title + "-card";
             let bookTitle = document.createElement("h3");
             bookTitle.textContent = myLibrary[i].title;
             let bookAuthor = document.createElement("h4");

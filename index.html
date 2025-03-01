@@ -8,16 +8,20 @@
   <body>
     <h1>My Library</h1>
 
-    <form action="" id="form">
-      <input type="text" id="title" />
-      <input type="text" id="author" />
-      <input type="text" id="pages" />
-      <label>
-        <input type="checkbox" id="read" />
-        Read?
-      </label>
-      <input type="submit" id="submitBookButton" />
-    </form>
+    <button id="add-book">Add Book</button>
+
+    <dialog id="add-book-modal" open>
+      <form action="" id="form">
+        <input type="text" id="title" />
+        <input type="text" id="author" />
+        <input type="text" id="pages" />
+        <label>
+          <input type="checkbox" id="read" />
+          Read?
+        </label>
+        <input type="submit" id="submit-book" />
+      </form>
+    </dialog>
 
     <div class="library-grid">
       <div class="test-book-card">
