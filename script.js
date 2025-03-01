@@ -28,6 +28,7 @@ submitBook.addEventListener("click", (event) => {
     // event.preventDefault(); this is no longer required due to method="dialog" on the form
     addBookToLibrary();
     displayLibrary();
+    bookModal.querySelector("#form").reset();
 });
 
 libraryGrid = document.querySelector(".library-grid");
