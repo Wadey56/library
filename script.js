@@ -25,7 +25,7 @@ addBook.addEventListener("click", () => {
 
 const submitBook = document.getElementById("submit-book");
 submitBook.addEventListener("click", (event) => {
-    event.preventDefault();
+    // event.preventDefault(); this is no longer required due to method="dialog" on the form
     addBookToLibrary();
     displayLibrary();
 });
