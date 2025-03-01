@@ -48,24 +48,28 @@ function displayLibrary(){
             bookPages.textContent = myLibrary[i].pages;
             let bookRead = document.createElement("p");
             bookRead.textContent = myLibrary[i].read;
-            let removeBook = document.createElement("button");
-            removeBook.textContent = "Remove";
-            removeBook.id = myLibrary[i].id;
-            removeBook.classList = "remove-book-button"
+            let removeBookButton = document.createElement("button");
+            removeBookButton.textContent = "Remove";
+            removeBookButton.id = myLibrary[i].id;
+            removeBookButton.classList = "remove-book-button"
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
             bookCard.appendChild(bookAuthor);
             bookCard.appendChild(bookPages);
             bookCard.appendChild(bookRead);
-            bookCard.appendChild(removeBook);
+            bookCard.appendChild(removeBookButton);
 
             myLibrary[i].new = false;
         }
     }
 }
 
-function findBookIndex(title) {
-    return myLibrary.findIndex(book => book.title == title);
+function findBookIndex(id) {
+    return myLibrary.findIndex(book => book.id == id);
 }
 
+const removeBookButton = document.getElementsByClassName("remove-book-button");
+removeBookButton.addEventListener("click", () => {
+    myLibrary.splice()
+})
