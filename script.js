@@ -57,3 +57,8 @@ function displayLibrary(){
         }
     }
 }
+
+function findBookIndex(title) {
+    return myLibrary.findIndex(book => book.title == title);
+}
+
