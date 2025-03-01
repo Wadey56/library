@@ -51,6 +51,7 @@ function displayLibrary(){
             let removeBook = document.createElement("button");
             removeBook.textContent = "Remove";
             removeBook.id = myLibrary[i].id;
+            removeBook.classList = "remove-book-button"
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
