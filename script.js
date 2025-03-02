@@ -69,7 +69,8 @@ function findBookIndex(id) {
     return myLibrary.findIndex(book => book.id == id);
 }
 
-const removeBookButton = document.getElementsByClassName("remove-book-button");
-removeBookButton.addEventListener("click", () => {
-    myLibrary.splice()
-})
+libraryGrid.addEventListener("click", (event) => {
+    if (event.target.classList.contains("remove-book-button")) {
+      myLibrary.splice(findBookIndex(event.target.id), 1);
+    }
+  });
