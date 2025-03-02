@@ -73,5 +73,10 @@ function findBookIndex(id) {
 libraryGrid.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-book-button")) {
       myLibrary.splice(findBookIndex(event.target.id), 1);
+      removeBookDisplay(event.target.id);
     }
   });
+
+  function removeBookDisplay(id) {
+    document.getElementById(id + "-book-card").remove();
+  }
