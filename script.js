@@ -40,6 +40,7 @@ function displayLibrary(){
     for (let i = 0; i < myLibrary.length; i++) {
         if (myLibrary[i].new == true) {
             let bookCard = document.createElement("div");
+            bookCard.id = myLibrary[i].id + "-book-card";
             let bookTitle = document.createElement("h3");
             bookTitle.textContent = myLibrary[i].title;
             let bookAuthor = document.createElement("h4");
