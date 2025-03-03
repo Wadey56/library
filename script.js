@@ -54,6 +54,7 @@ function displayLibrary(){
             bookPages.textContent = myLibrary[i].pages;
             let bookRead = document.createElement("p");
             bookRead.textContent = myLibrary[i].read;
+            bookRead.classList = "book-read";
             let removeBookButton = document.createElement("button");
             removeBookButton.textContent = "Remove";
             removeBookButton.id = myLibrary[i].id + "-remove";
