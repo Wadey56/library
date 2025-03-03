@@ -82,13 +82,16 @@ function findBookIndex(id) {
 }
 
 libraryGrid.addEventListener("click", (event) => {
+    const bookID = event.target.id.replace("-remove", "").replace("-read", ""); // gets the id of the book w/o losing unique ids
+
     if (event.target.classList.contains("remove-book-button")) {
-      myLibrary.splice(findBookIndex(event.target.id), 1);
-      removeBookDisplay(event.target.id);
+      myLibrary.splice(findBookIndex(bookID), 1);
+      removeBookDisplay(bookID);
     } else if (event.target.classList.contains("read-book-button")) {
-      myLibrary[findBookIndex(event.target.id)].updateRead();
+      myLibrary[findBookIndex(bookID)].updateRead();
+      document.getElementById(bookID + "-book-card").querySelector(".book-read").textContent = myLibrary[findBookIndex(bookID)].read;
     }
-  });
+  }); // none of this works as the ids of the buttons have changed
 
   function removeBookDisplay(id) {
     document.getElementById(id + "-book-card").remove();
