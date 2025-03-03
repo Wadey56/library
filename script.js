@@ -58,6 +58,10 @@ function displayLibrary(){
             removeBookButton.textContent = "Remove";
             removeBookButton.id = myLibrary[i].id;
             removeBookButton.classList = "remove-book-button"
+            let readBookButton = document.createElement("button");
+            readBookButton.textContent = "Read";
+            readBookButton.id = myLibrary[i].id;
+            readBookButton.classList = "read-book-button";
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
@@ -65,6 +69,7 @@ function displayLibrary(){
             bookCard.appendChild(bookPages);
             bookCard.appendChild(bookRead);
             bookCard.appendChild(removeBookButton);
+            bookCard.appendChild(readBookButton);
 
             myLibrary[i].new = false;
         }
