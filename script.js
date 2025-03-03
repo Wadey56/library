@@ -84,6 +84,8 @@ libraryGrid.addEventListener("click", (event) => {
     if (event.target.classList.contains("remove-book-button")) {
       myLibrary.splice(findBookIndex(event.target.id), 1);
       removeBookDisplay(event.target.id);
+    } else if (event.target.classList.contains("read-book-button")) {
+      myLibrary[findBookIndex(event.target.id)].updateRead();
     }
   });
 
