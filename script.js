@@ -10,6 +10,11 @@ function Book(title, author, pages, read, id) {
     this.id = id
 }
 
+Book.prototype.updateRead = function () {
+    this.read = !this.read;
+    return this.read
+}
+
 function addBookToLibrary() {
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
