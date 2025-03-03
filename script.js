@@ -91,8 +91,8 @@ libraryGrid.addEventListener("click", (event) => {
       myLibrary[findBookIndex(bookID)].updateRead();
       document.getElementById(bookID + "-book-card").querySelector(".book-read").textContent = myLibrary[findBookIndex(bookID)].read;
     }
-  }); // none of this works as the ids of the buttons have changed
+  });
 
-  function removeBookDisplay(id) {
+function removeBookDisplay(id) {
     document.getElementById(id + "-book-card").remove();
-  }
+}
