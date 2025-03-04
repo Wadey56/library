@@ -34,6 +34,19 @@ addBook.addEventListener("click", () => {
 const submitBook = document.getElementById("submit-book");
 submitBook.addEventListener("click", (event) => {
     // event.preventDefault(); this is no longer required due to method="dialog" on the form
+    let title = document.getElementById("title");
+    let author = document.getElementById("author");
+    
+    if (title.value == "") {
+        title.parentElement.querySelector(".validation").style.display = "block";
+        event.preventDefault();
+        return;
+    } else if (author.value == "") {
+        author.parentElement.querySelector(".validation").style.display = "block";
+        event.preventDefault();
+        return;
+    }
+
     addBookToLibrary();
     displayLibrary();
     bookModal.querySelector("#form").reset();
