@@ -36,13 +36,18 @@ submitBook.addEventListener("click", (event) => {
     // event.preventDefault(); this is no longer required due to method="dialog" on the form
     let title = document.getElementById("title");
     let author = document.getElementById("author");
+    let validation = document.querySelectorAll(".validation");
     
     if (title.value == "") {
-        title.parentElement.querySelector(".validation").style.display = "block";
+        validation.forEach(validation => {
+            validation.style.display = "block";
+        })
         event.preventDefault();
         return;
     } else if (author.value == "") {
-        author.parentElement.querySelector(".validation").style.display = "block";
+        validation.forEach(validation => {
+            validation.style.display = "block";
+        })
         event.preventDefault();
         return;
     }
