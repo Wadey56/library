@@ -54,6 +54,9 @@ submitBook.addEventListener("click", (event) => {
 
     addBookToLibrary();
     displayLibrary();
+    validation.forEach(validation => {
+        validation.style.display = "none";
+    })
     bookModal.querySelector("#form").reset();
 });
 
