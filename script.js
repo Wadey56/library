@@ -68,13 +68,13 @@ function displayLibrary(){
             let bookCard = document.createElement("div");
             bookCard.id = myLibrary[i].id + "-book-card";
             let bookTitle = document.createElement("h3");
-            bookTitle.textContent = myLibrary[i].title;
+            bookTitle.textContent = "Title: " + myLibrary[i].title;
             let bookAuthor = document.createElement("h4");
-            bookAuthor.textContent = myLibrary[i].author;
+            bookAuthor.textContent = "Author: " + myLibrary[i].author;
             let bookPages = document.createElement("p");
-            bookPages.textContent = myLibrary[i].pages;
+            bookPages.textContent = "Pages: " + myLibrary[i].pages;
             let bookRead = document.createElement("p");
-            bookRead.textContent = myLibrary[i].read;
+            bookRead.textContent = "Read?: " + myLibrary[i].read;
             bookRead.classList = "book-read";
             let removeBookButton = document.createElement("button");
             removeBookButton.textContent = "Remove";
