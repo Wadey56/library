@@ -32,3 +32,13 @@ p {
 h1, h2, h3, h4, h5, h6 {
     text-wrap: balance;
 }
+
+.page-grid {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.library-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
