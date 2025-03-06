@@ -40,7 +40,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar {
-    border-right: 4px solid rgb(62, 95, 94);
+    border-right: 6px solid rgb(62, 95, 94);
+    background: url("images/flowers.webp");
+    height: 100vh;
 }
 
 .library-grid {
