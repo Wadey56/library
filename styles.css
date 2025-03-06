@@ -40,9 +40,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .sidebar {
-    border-right: 6px solid rgb(62, 95, 94);
+    border-right: 6px solid rgb(89, 128, 126);
     background: url("images/flowers.webp");
-    height: 100vh;
+    display: flex;
+    justify-content: center;    
+}
+
+#add-book {
+    padding: 0.5rem 1rem;
+    border: 3px solid rgb(92, 128, 127);
+    border-radius: 10px;
+    background-color: rgb(250, 242, 231);
+    font-size: 1.4rem;
 }
 
 .library-grid {
