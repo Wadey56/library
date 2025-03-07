@@ -42,16 +42,19 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar {
     border-right: 6px solid rgb(89, 128, 126);
     background: url("images/flowers.webp");
+    height: 100vh;
     display: flex;
-    justify-content: center;    
+    flex-direction: column;
+    align-items: center;
 }
 
 #add-book {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2rem;
     border: 3px solid rgb(92, 128, 127);
     border-radius: 10px;
     background-color: rgb(250, 242, 231);
     font-size: 1.4rem;
+    margin: 4rem 0;
 }
 
 .library-grid {
