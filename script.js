@@ -111,7 +111,7 @@ libraryGrid.addEventListener("click", (event) => {
       removeBookDisplay(bookID);
     } else if (event.target.classList.contains("read-book-button")) {
       myLibrary[findBookIndex(bookID)].updateRead();
-      document.getElementById(bookID + "-book-card").querySelector(".book-read").textContent = myLibrary[findBookIndex(bookID)].read;
+      document.getElementById(bookID + "-book-card").querySelector(".book-read").textContent = "Read?: " + myLibrary[findBookIndex(bookID)].read;
     }
   });
 
