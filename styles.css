@@ -50,7 +50,10 @@ h1, h2, h3, h4, h5, h6 {
 .sidebar {
     border-right: 6px solid rgb(89, 128, 126);
     background: url("images/flowers.webp");
+    background-size: cover;
     height: 100vh;
+    position: sticky;
+    top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
