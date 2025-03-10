@@ -1,4 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Pacifico&display=swap');
+
+.inknut-antiqua-bold {
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 700;
+    font-style: normal;
+}
 
 .pacifico-regular {
     font-family: "Pacifico", cursive;
@@ -13,6 +19,11 @@
 
 * {
     margin: 0;
+    font-family: "Inknut Antiqua", serif;
+    font-weight: 650;
+    font-style: normal;
+    color: rgb(89, 128, 126);
+    font-size: 0.85rem;
 }
 
 body {
@@ -67,6 +78,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.4rem;
     margin: 4rem 0;
     box-shadow: 0 4px 4px rgba(0, 0, 0, 0.4);
+    font-weight: 700;
 }
 
 .main-content {
