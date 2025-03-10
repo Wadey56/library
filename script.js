@@ -91,8 +91,8 @@ function displayLibrary(){
             bookCard.appendChild(bookAuthor);
             bookCard.appendChild(bookPages);
             bookCard.appendChild(bookRead);
-            bookCard.appendChild(removeBookButton);
             bookCard.appendChild(readBookButton);
+            bookCard.appendChild(removeBookButton);
 
             myLibrary[i].new = false;
         }
