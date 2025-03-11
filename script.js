@@ -81,7 +81,7 @@ function displayLibrary(){
             bookPages.textContent = "Pages: " + myLibrary[i].pages;
             let bookRead = document.createElement("p");
             bookRead.textContent = "Read?: " + myLibrary[i].read;
-            bookRead.classList = "book-read card-button";
+            bookRead.classList = "book-read";
             let removeBookButton = document.createElement("button");
             removeBookButton.textContent = "Remove";
             removeBookButton.id = myLibrary[i].id + "-remove";
@@ -89,7 +89,7 @@ function displayLibrary(){
             let readBookButton = document.createElement("button");
             readBookButton.textContent = "Read";
             readBookButton.id = myLibrary[i].id + "-read";
-            readBookButton.classList = "read-book-button";
+            readBookButton.classList = "read-book-button card-button";
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
