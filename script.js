@@ -1,4 +1,24 @@
-const myLibrary = [];
+const myLibrary = [{
+    title: "The Lord of the Rings",
+    author: "J.R.R. Tolkien",
+    pages: 1178,
+    read: true,
+    new: true,
+    id: 0}, 
+    {
+    title: "What If?",
+    author: "Randall Munroe",
+    pages: 320,
+    read: true,
+    new: true,
+    id: 1},
+    {
+    title: "Delicious in Dungeon, Vol. 1",
+    author: "Ryoko Kui",
+    pages: 192,
+    read: true,
+    new: true,
+    id: 2}];
 let counter = 0;
 
 function Book(title, author, pages, read, id) {
@@ -118,3 +138,5 @@ libraryGrid.addEventListener("click", (event) => {
 function removeBookDisplay(id) {
     document.getElementById(id + "-book-card").remove();
 }
+
+displayLibrary();
