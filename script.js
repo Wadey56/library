@@ -3,7 +3,7 @@ const myLibrary = [
     new Book("What If?", "Randall Munroe", 320, true, 1),
     new Book("Delicious in Dungeon, Vol. 1", "Ryoko Kui", 192, true, 2)
   ];
-  
+
 let counter = 0;
 
 function Book(title, author, pages, read, id) {
@@ -81,11 +81,11 @@ function displayLibrary(){
             bookPages.textContent = "Pages: " + myLibrary[i].pages;
             let bookRead = document.createElement("p");
             bookRead.textContent = "Read?: " + myLibrary[i].read;
-            bookRead.classList = "book-read";
+            bookRead.classList = "book-read card-button";
             let removeBookButton = document.createElement("button");
             removeBookButton.textContent = "Remove";
             removeBookButton.id = myLibrary[i].id + "-remove";
-            removeBookButton.classList = "remove-book-button"
+            removeBookButton.classList = "remove-book-button card-button";
             let readBookButton = document.createElement("button");
             readBookButton.textContent = "Read";
             readBookButton.id = myLibrary[i].id + "-read";
