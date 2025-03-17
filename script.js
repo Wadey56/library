@@ -4,15 +4,13 @@ const myLibrary = [
     new Book("Delicious in Dungeon, Vol. 1", "Ryoko Kui", 192, true, 2)
   ];
 
-let counter = 0;
-
 function Book(title, author, pages, read, id) {
     this.title = title;
     this.author = author;
     this.pages = pages;
     this.read = read;
     this.new = true;
-    this.id = id
+    this.id = id;
 }
 
 Book.prototype.updateRead = function () {
@@ -25,7 +23,7 @@ function addBookToLibrary() {
     const author = document.getElementById("author").value;
     const pages = document.getElementById("pages").value;
     const read = document.getElementById("read").checked;
-    const id = counter++
+    const id = crypto.randomUUID();
     const book = new Book(title, author, pages, read, id);
     myLibrary.push(book);
 } 
