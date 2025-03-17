@@ -90,14 +90,17 @@ function displayLibrary(){
             readBookButton.textContent = "Read";
             readBookButton.id = myLibrary[i].id + "-read";
             readBookButton.classList = "read-book-button card-button";
+            let buttonGroup = document.createElement("div");
+            buttonGroup.classList = "button-group";
 
             libraryGrid.appendChild(bookCard);
             bookCard.appendChild(bookTitle);
             bookCard.appendChild(bookAuthor);
             bookCard.appendChild(bookPages);
             bookCard.appendChild(bookRead);
-            bookCard.appendChild(readBookButton);
-            bookCard.appendChild(removeBookButton);
+            bookCard.appendChild(buttonGroup);
+            buttonGroup.appendChild(readBookButton);
+            buttonGroup.appendChild(removeBookButton);
 
             myLibrary[i].new = false;
         }
