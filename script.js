@@ -1,22 +1,24 @@
+class Book {
+    constructor(title, author, pages, read, id) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.new = true;
+        this.id = id;
+    }
+
+    updateRead() {
+        this.read = !this.read;
+        return this.read
+    }
+}
+
 const myLibrary = [
     new Book("The Lord of the Rings", "J.R.R. Tolkien", 1178, true, 0),
     new Book("What If?", "Randall Munroe", 320, true, 1),
     new Book("Delicious in Dungeon, Vol. 1", "Ryoko Kui", 192, true, 2)
   ];
-
-function Book(title, author, pages, read, id) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.read = read;
-    this.new = true;
-    this.id = id;
-}
-
-Book.prototype.updateRead = function () {
-    this.read = !this.read;
-    return this.read
-}
 
 function addBookToLibrary() {
     const title = document.getElementById("title").value;
